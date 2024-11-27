@@ -10,6 +10,8 @@ public class Monster : MonoBehaviour
     public GameObject hpBarPrefab; // HP 바 프리팹
     private GameObject hpBarInstance; // 생성된 HP 바 인스턴스
 
+
+
     private void Start()
     {
         CreateHPBar();
@@ -19,6 +21,13 @@ public class Monster : MonoBehaviour
     {
         transform.position -= new Vector3(speed, 0, 0);
     }
+
+    void StopMoving()
+    {
+        //speed = 0;
+        //transform.position -= new Vector3(speed, 0, 0);
+    }
+
     void CreateHPBar()
     {
         // Canvas를 찾아서 HP 바를 추가
@@ -32,4 +41,5 @@ public class Monster : MonoBehaviour
             hpBarInstance.GetComponent<HPBar>().SetTarget(this.transform);
         }
     }
+
 }

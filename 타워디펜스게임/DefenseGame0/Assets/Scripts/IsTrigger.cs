@@ -10,9 +10,17 @@ public class IsTrigger : MonoBehaviour
 
         Monster monster = collision.gameObject.GetComponent<Monster>();
 
+
         Unit unit = collision.gameObject.GetComponent<Unit>();
 
         Debug.Log("Collider");
-        monster.transform.position -= new Vector3(0, 0, 0);
+        
+        // 몬스터와 충돌하면 정지
+        if (monster != null)
+        {
+            monster.speed = 0;
+            transform.position -= new Vector3(monster.speed, 0, 0);
+        }
+
     }
 }
