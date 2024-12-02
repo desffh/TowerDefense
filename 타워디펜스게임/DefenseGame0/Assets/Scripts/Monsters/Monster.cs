@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
-    public float speed;
-
     public GameObject hpBarPrefab; // HP 바 프리팹
     private GameObject hpBarInstance; // 생성된 HP 바 인스턴스
 
@@ -19,14 +17,11 @@ public class Monster : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position -= new Vector3(speed, 0, 0);
+
     }
 
-    void StopMoving()
-    {
-        //speed = 0;
-        //transform.position -= new Vector3(speed, 0, 0);
-    }
+
+
 
     void CreateHPBar()
     {
