@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
 
     public LayerMask tileMask;
 
+    [SerializeField] GameObject UnitPoint;
+
     public void BuyUnit(GameObject unit, Sprite sprite)
     {
         currentUnit = unit;
@@ -40,8 +42,13 @@ public class GameManager : MonoBehaviour
             
             if (Input.GetMouseButtonDown(0) && !hit.collider.GetComponent<Tile>().hasUnits)
             {
-                Instantiate(currentUnit,
+
+                // 오브젝트 생성 후 GameManager 계층으로 들어감
+
+                GameObject unitPoint = Instantiate(currentUnit,
                     hit.collider.transform.position, Quaternion.identity);
+
+                unitPoint.transform.SetParent(this.transform, false);
 
                 hit.collider.GetComponent<Tile>().hasUnits = true;
                 
