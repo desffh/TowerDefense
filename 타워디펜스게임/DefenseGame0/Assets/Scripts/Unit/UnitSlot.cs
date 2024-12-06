@@ -25,17 +25,17 @@ public class UnitSlot : MonoBehaviour
     // UnitStat 스크립트
     private UnitStat unitStat;
 
-    // Cost 스크립트
-    private Cost totalcost;
+    private Cost Cost;
+
+
+
 
     private void Start()
     {
         gameManager =
             GameObject.Find("GameManager").GetComponent<GameManager>();
         
-            GetComponent<Button>().onClick.AddListener(BuyUnit);
-
-
+        GetComponent<Button>().onClick.AddListener(BuyUnit);
 
 
     }
@@ -43,16 +43,27 @@ public class UnitSlot : MonoBehaviour
     // 유닛 구매
     private void BuyUnit()
     {
-        if (totalcost != null)
+        // totalcost > Unit.cost 일때만 실행
+        if (costco < Cost.totalCost)
         {
             gameManager.BuyUnit(unitObject, unitSprite);
-            
-            totalcost.cost -= costco;
+            // 전체 cost에서 각각의 유닛 차감
+            Cost.totalCost -= costco;
+
         }
         else
         {
-            Debug.Log("totalcost null");
-        }    
+            Debug.Log("No Create");
+        }
+            
+
+        
+        // Hierarchy창에서 Total_Cost_Text 오브젝트 찾아서 코스트 갱신
+        GameObject.Find("Total_Cost_Text").GetComponent<TextMeshProUGUI>().text =
+        Cost.totalCost.ToString();
+            
+
+        Debug.Log(Cost.totalCost);
 
     }
 

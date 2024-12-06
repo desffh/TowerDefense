@@ -4,6 +4,8 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 
 // 부모 추상 클래스 UnitStat
+
+// 객체를 만들 수 없음
 public abstract class UnitStat : MonoBehaviour
 {
     // 가져오고 protected

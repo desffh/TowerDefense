@@ -8,33 +8,38 @@ public class Cost : MonoBehaviour
 {
     [SerializeField] Text totalcost;
 
-    [SerializeField] TextMeshProUGUI totalCostText;
+    [SerializeField]  TextMeshProUGUI totalCostText;
 
-     public int cost;
+
+    // 정적 변수 : 전체 코스트
+     static public int totalCost = 0;
 
 
     private void Start()
     {
+        totalCost = 0; // 초기화
         StartCoroutine(AddCost());
+
+        
     }
 
 
     // 3초마다 cost 5씩 증가
     IEnumerator AddCost()
     {
-        while (cost < 50)
+        while (totalCost < 50)
         {
             yield return new WaitForSeconds(3.0f);
 
-            cost += 5;
+            totalCost += 5;
             UpdateUI();
-            Debug.Log(cost);
+            Debug.Log(totalCost);
         }
     }
 
     public void UpdateUI()
     {
-        totalCostText.text = cost.ToString();
+        totalCostText.text = totalCost.ToString();
     }
 
 }

@@ -179,7 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1880,6 +1880,7 @@ GameObject:
   - component: {fileID: 323722952}
   - component: {fileID: 323722954}
   - component: {fileID: 323722953}
+  - component: {fileID: 323722955}
   m_Layer: 5
   m_Name: Unit5
   m_TagString: Untagged
@@ -1969,8 +1970,20 @@ MonoBehaviour:
   unitSprite: {fileID: 21300000, guid: 59a9e6941ca84054290733be01f224dc, type: 3}
   unitObject: {fileID: 6408335882787890806, guid: 71d4aff8ddd793d4c8be93899f9c2950, type: 3}
   icon: {fileID: 1665235569}
-  costco: 0
+  costco: 10
   costText: {fileID: 23077309}
+--- !u!114 &323722955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323722951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34c73cb3e8c68bc4d91100278dfa60f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &327488424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2989,7 +3002,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 7
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4112,7 +4125,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4200,6 +4213,7 @@ GameObject:
   - component: {fileID: 636655717}
   - component: {fileID: 636655719}
   - component: {fileID: 636655718}
+  - component: {fileID: 636655720}
   m_Layer: 5
   m_Name: Unit2
   m_TagString: Untagged
@@ -4289,8 +4303,20 @@ MonoBehaviour:
   unitSprite: {fileID: 21300000, guid: 59a9e6941ca84054290733be01f224dc, type: 3}
   unitObject: {fileID: 6408335882787890806, guid: 510cd6d0b99ec034082bd8185b0c89bb, type: 3}
   icon: {fileID: 550958857}
-  costco: 0
+  costco: 5
   costText: {fileID: 871079680}
+--- !u!114 &636655720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636655716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09efee573e981aa4fa90b3a0c5e44989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &648308846
 GameObject:
   m_ObjectHideFlags: 0
@@ -4349,12 +4375,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 64dbf4db7f9cd9a498fcdcb3b8ab4750, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5bc123f4ac38cea4d814454fcf29dfb7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 11.52, y: 6.48}
+  m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4369,8 +4395,8 @@ Transform:
   m_GameObject: {fileID: 648308846}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5923, y: -0.026, z: 1}
-  m_LocalScale: {x: 0.9309392, y: 0.9288786, z: 1}
+  m_LocalPosition: {x: 0.62, y: 0.034, z: 1}
+  m_LocalScale: {x: 0.9253462, y: 0.9275651, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4688,6 +4714,7 @@ GameObject:
   - component: {fileID: 711247728}
   - component: {fileID: 711247730}
   - component: {fileID: 711247729}
+  - component: {fileID: 711247731}
   m_Layer: 5
   m_Name: Unit4
   m_TagString: Untagged
@@ -4777,8 +4804,20 @@ MonoBehaviour:
   unitSprite: {fileID: 21300000, guid: 59a9e6941ca84054290733be01f224dc, type: 3}
   unitObject: {fileID: 6408335882787890806, guid: 2ed5d016469420d40bbb08f390b3b68c, type: 3}
   icon: {fileID: 1463664407}
-  costco: 0
+  costco: 7
   costText: {fileID: 478532504}
+--- !u!114 &711247731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711247727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940c8c9043edbd241870804836ef4f98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &756021477
 GameObject:
   m_ObjectHideFlags: 0
@@ -5318,7 +5357,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6036,6 +6075,7 @@ GameObject:
   - component: {fileID: 945498378}
   - component: {fileID: 945498379}
   - component: {fileID: 945498380}
+  - component: {fileID: 945498381}
   m_Layer: 5
   m_Name: Unit1
   m_TagString: Untagged
@@ -6081,7 +6121,7 @@ MonoBehaviour:
   unitSprite: {fileID: 21300000, guid: 59a9e6941ca84054290733be01f224dc, type: 3}
   unitObject: {fileID: 6408335882787890806, guid: ff934c6150e1a4f489810723462f1b02, type: 3}
   icon: {fileID: 50482182}
-  costco: 0
+  costco: 3
   costText: {fileID: 1680734728}
 --- !u!114 &945498380
 MonoBehaviour:
@@ -6127,6 +6167,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &945498381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945498377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e0458988d0f1242bfa30ac46870c63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &952095852
 GameObject:
   m_ObjectHideFlags: 0
@@ -6306,7 +6358,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalcost: {fileID: 495332023}
   totalCostText: {fileID: 871442085}
-  cost: 0
 --- !u!4 &979948814
 Transform:
   m_ObjectHideFlags: 0
@@ -9340,7 +9391,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9576,6 +9627,7 @@ GameObject:
   - component: {fileID: 1716620693}
   - component: {fileID: 1716620695}
   - component: {fileID: 1716620694}
+  - component: {fileID: 1716620696}
   m_Layer: 5
   m_Name: Unit3
   m_TagString: Untagged
@@ -9665,8 +9717,20 @@ MonoBehaviour:
   unitSprite: {fileID: 21300000, guid: 59a9e6941ca84054290733be01f224dc, type: 3}
   unitObject: {fileID: 6408335882787890806, guid: c66049b91421812449968fa2a45d12a7, type: 3}
   icon: {fileID: 2075651770}
-  costco: 0
+  costco: 4
   costText: {fileID: 613852754}
+--- !u!114 &1716620696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716620692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a771c0b5b10ddc0418f477ed2a08e7e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1736197344
 GameObject:
   m_ObjectHideFlags: 0
