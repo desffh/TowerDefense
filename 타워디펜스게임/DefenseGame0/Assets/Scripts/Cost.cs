@@ -15,15 +15,6 @@ public class Cost : MonoBehaviour
      static public int totalCost = 0;
 
 
-    private void Start()
-    {
-        totalCost = 0; // 초기화
-        StartCoroutine(AddCost());
-
-        
-    }
-
-
     // 3초마다 cost 5씩 증가
     IEnumerator AddCost()
     {
@@ -35,6 +26,12 @@ public class Cost : MonoBehaviour
             UpdateUI();
             Debug.Log(totalCost);
         }
+    }
+
+    private void Start()
+    {
+        totalCost = 0; // 초기화
+        StartCoroutine(AddCost());
     }
 
     public void UpdateUI()

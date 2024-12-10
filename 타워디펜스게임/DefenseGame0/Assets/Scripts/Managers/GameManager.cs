@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,7 +13,12 @@ public class GameManager : MonoBehaviour
 
     public LayerMask tileMask;
 
+
     [SerializeField] GameObject UnitPoint;
+
+    [SerializeField] Text SettingText;
+
+    [SerializeField] Transform canvas; // UI를 표시할 캔버스
 
     public void BuyUnit(GameObject unit, Sprite sprite)
     {
@@ -39,23 +45,30 @@ public class GameManager : MonoBehaviour
             // Sprite가져오고 컴포넌트 활성화
             hit.collider.GetComponent<SpriteRenderer>().sprite = currentUnitSprite;
             hit.collider.GetComponent<SpriteRenderer>().enabled = true;
-            
+
+            SettingText.gameObject.SetActive(true);
+
             if (Input.GetMouseButtonDown(0) && !hit.collider.GetComponent<Tile>().hasUnits)
             {
 
-                // 오브젝트 생성 후 GameManager 계층으로 들어감
-
+                Debug.Log("MouseButtonDown");
+                
                 GameObject unitPoint = Instantiate(currentUnit,
                     hit.collider.transform.position, Quaternion.identity);
 
                 unitPoint.transform.SetParent(this.transform, false);
 
                 hit.collider.GetComponent<Tile>().hasUnits = true;
+
+                if(hit.collider.GetComponent<Tile>().hasUnits == true)
+                {
+                    SettingText.gameObject.SetActive(false);    
+                }
                 
                 currentUnit = null;
                 currentUnitSprite = null;
-            
             }
+            
         }
 
     }

@@ -8,8 +8,15 @@ public class HPBar : MonoBehaviour
 {
     public Transform monsterTransform; // 몬스터의 위치
 
-    private void Update()
+    private void Start()
     {
+
+    }
+
+
+    private void Update()
+    { 
+
         // 1. 몬스터의 월드 좌표에 오프셋을 더함
         Vector3 adjustedWorldPosition = monsterTransform.position + new Vector3(0,1,0);
 
@@ -23,6 +30,7 @@ public class HPBar : MonoBehaviour
         public void SetTarget(Transform newTarget)
         {
             monsterTransform = newTarget;
+            Debug.Log($"HPBar에 {monsterTransform.name} 연결 완료");
         }
 
 }

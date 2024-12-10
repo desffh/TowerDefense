@@ -15,14 +15,6 @@ public class Monster : MonoBehaviour
         CreateHPBar();
     }
 
-    private void FixedUpdate()
-    {
-
-    }
-
-
-
-
     void CreateHPBar()
     {
         // Canvas를 찾아서 HP 바를 추가
@@ -36,5 +28,7 @@ public class Monster : MonoBehaviour
             hpBarInstance.GetComponent<HPBar>().SetTarget(this.transform);
         }
     }
+
+
 
 }

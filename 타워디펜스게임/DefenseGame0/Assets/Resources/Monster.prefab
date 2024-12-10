@@ -187,3 +187,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FinalDestination: {x: 0, y: 0, z: 0}
   moveSpeed: 0.01
+  approachSpeed: 0.2
