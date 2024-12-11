@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Monster
   - DestroyZone
+  - Unit
   layers:
   - Default
   - TransparentFX
