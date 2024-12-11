@@ -30,7 +30,7 @@ public class HPBar : MonoBehaviour
         public void SetTarget(Transform newTarget)
         {
             monsterTransform = newTarget;
-            Debug.Log($"HPBar에 {monsterTransform.name} 연결 완료");
+            //Debug.Log($"HPBar에 {monsterTransform.name} 연결 완료");
         }
 
 }

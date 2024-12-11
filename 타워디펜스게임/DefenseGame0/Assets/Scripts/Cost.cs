@@ -24,7 +24,7 @@ public class Cost : MonoBehaviour
 
             totalCost += 5;
             UpdateUI();
-            Debug.Log(totalCost);
+            //Debug.Log(totalCost);
         }
     }
 

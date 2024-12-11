@@ -10,11 +10,14 @@ public class UnitDelete : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("OnTriggerEnter2D called"); // 함수 호출 확인
-        if (collision.gameObject == gameManager.currentUnit && collision.CompareTag(destroyZone))
+        if (collision.gameObject == gameManager.currentUnitSprite)
         {
-            Debug.Log("Destroy");
-            Destroy(collision.gameObject);
+            if (collision.gameObject.transform.position == collision.transform.position)
+            {
+                Debug.Log("Destroy");
+                Destroy(collision.gameObject);
+
+            }
         }
     }
 
