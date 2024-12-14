@@ -42,6 +42,7 @@ public class UnitSlot : MonoBehaviour
         // totalcost > Unit.cost 일때만 실행
         if (costco <= Cost.totalCost)
         {
+            
             gameManager.BuyUnit(unitObject, unitSprite);
 
             // 전체 cost에서 각각의 유닛 차감
@@ -58,7 +59,7 @@ public class UnitSlot : MonoBehaviour
         }
       
 
-        Debug.Log(Cost.totalCost);
+        // Debug.Log(Cost.totalCost);
 
     }
 

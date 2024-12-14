@@ -394,6 +394,7 @@
 "Assets/Scripts/Unit/Unit00030.cs"
 "Assets/Scripts/Unit/Unit00040.cs"
 "Assets/Scripts/Unit/Unit00050.cs"
+"Assets/Scripts/Unit/UnitCount.cs"
 "Assets/Scripts/Unit/UnitDelete.cs"
 "Assets/Scripts/Unit/UnitSlot.cs"
 "Assets/Scripts/Unit/UnitStat.cs"

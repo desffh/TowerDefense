@@ -13,7 +13,7 @@ public class Tile : MonoBehaviour
     static int gridRows = 5; // 세로
     static int gridColumns = 10; // 가로
 
-    private void Start()
+    private void Awake()
     {
          grid = new GameObject[gridRows,gridColumns];
 
