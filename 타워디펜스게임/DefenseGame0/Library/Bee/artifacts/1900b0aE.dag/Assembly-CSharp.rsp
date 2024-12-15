@@ -385,6 +385,7 @@
 "Assets/Scripts/Monsters/Monster.cs"
 "Assets/Scripts/Monsters/MonsterController.cs"
 "Assets/Scripts/Monsters/MonsterSpawner.cs"
+"Assets/Scripts/Sample.cs"
 "Assets/Scripts/SpawnPoint.cs"
 "Assets/Scripts/Tile.cs"
 "Assets/Scripts/Unit/TimeController.cs"

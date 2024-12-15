@@ -43,6 +43,11 @@ public class GameManager : MonoBehaviour
     // 배치된 유닛 리스트
     private List<int> units = new List<int>();
 
+
+    [SerializeField] UnitCount unitCount;
+
+   
+
     private void Start()
     {
         unitCounting = gameObject.AddComponent<UnitCount>();
@@ -61,6 +66,18 @@ public class GameManager : MonoBehaviour
         selectUnitSprite = sprite;
     }
 
+    public bool UnitOver()
+    {
+        // 유닛의 갯수가 한계 갯수와 같아지면 더이상 생성불가
+        if (unitCount.GetUnitTotalCount() == unitCount.GetUnitCount())
+        {
+            
+            return true;
+        }
+        else
+            { return false; }
+
+    }
 
 
     // 코루틴 사용해서 버튼이 1초뒤에 활성화되게
@@ -72,7 +89,7 @@ public class GameManager : MonoBehaviour
         foreach (Button button in unitButtons)
         {
             button.interactable = true; // 버튼 클릭 활성화
-            Debug.Log("1초 뒤 코루틴 활성화");
+            //Debug.Log("1초 뒤 코루틴 활성화");
         }
     }
 
@@ -83,6 +100,7 @@ public class GameManager : MonoBehaviour
         RaycastHit2D hit =
         Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition),
         Vector2.zero, Mathf.Infinity, mask);
+
 
         // 반복문으로 타일 가져오고 비활성화
         foreach (Transform tile in tiles)
@@ -95,12 +113,26 @@ public class GameManager : MonoBehaviour
         // 마우스 콜라이더와 (유닛목록에서 구매한) 유닛이 충돌한다면
         if (hit.collider && currentUnit)
         {
+            if(UnitOver() == true)
+            {
+                Debug.Log("UnitTotalCount: " + unitCount.GetUnitTotalCount());
+                Debug.Log("UnitCount: " + unitCount.GetUnitCount());
+
+                Debug.Log("UnitOver 성공");
+                // 유닛 목록 버튼 비활성화
+                foreach (Button button in unitButtons)
+                {
+                    button.interactable = false; // 버튼 클릭 비활성화
+                    //Debug.Log("비활성화");
+                }
+                return;
+            }
 
             // 유닛 목록 버튼 비활성화
             foreach (Button button in unitButtons)
             {
                 button.interactable = false; // 버튼 클릭 비활성화
-                Debug.Log("비활성화");
+                //Debug.Log("비활성화");
             }
 
             if (Input.GetMouseButtonDown(0) && hit.collider.gameObject.layer == LayerMask.NameToLayer("DeleteZone"))
@@ -131,7 +163,7 @@ public class GameManager : MonoBehaviour
             // 마우스로 눌렀고, Ray와 충돌한 오브젝트의 타일이 hasUnit이 아니라면           
             if (Input.GetMouseButtonDown(0) && !hit.collider.GetComponent<Tile>().hasUnits)
             {
-                Debug.Log("타일 클릭");
+                //Debug.Log("객체 생성");
                 // 객체 생성
                 GameObject unitPoint = Instantiate(currentUnit,
                     hit.collider.transform.position, Quaternion.identity);
@@ -142,12 +174,12 @@ public class GameManager : MonoBehaviour
 
                 // 충돌된 오브젝트가 있는 자리는 hasUnit = True
                 hit.collider.GetComponent<Tile>().hasUnits = true;
-                
-                unitCounting.Counting();
 
                 // 저장해두기
                 SelectUnit(currentUnit, currentUnitSprite);
 
+                Debug.Log("유닛 카운팅");
+                unitCount.Counting();
 
                 // 자리에 배치가 되었다면 메세지 비활성화
                 if (hit.collider.GetComponent<Tile>().hasUnits == true)
@@ -159,7 +191,6 @@ public class GameManager : MonoBehaviour
                 currentUnitSprite = null;
 
                 StartCoroutine(UnitButtonActive());
-
                 
             }
         }
