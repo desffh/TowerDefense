@@ -46,7 +46,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] UnitCount unitCount;
 
-   
+    GameObject selectedUnit = null;
+    Sprite selectedSprite = null;
 
     private void Start()
     {
@@ -60,12 +61,7 @@ public class GameManager : MonoBehaviour
         currentUnitSprite = sprite;
     }
 
-    public void SelectUnit(GameObject unit, Sprite sprite)
-    {
-        selectUnit = unit;
-        selectUnitSprite = sprite;
-    }
-
+    
     public bool UnitOver()
     {
         // 유닛의 갯수가 한계 갯수와 같아지면 더이상 생성불가
@@ -113,7 +109,7 @@ public class GameManager : MonoBehaviour
         // 마우스 콜라이더와 (유닛목록에서 구매한) 유닛이 충돌한다면
         if (hit.collider && currentUnit)
         {
-            if(UnitOver() == true)
+            if (UnitOver() == true)
             {
                 Debug.Log("UnitTotalCount: " + unitCount.GetUnitTotalCount());
                 Debug.Log("UnitCount: " + unitCount.GetUnitCount());
@@ -161,40 +157,74 @@ public class GameManager : MonoBehaviour
             SettingText.gameObject.SetActive(true);
 
             // 마우스로 눌렀고, Ray와 충돌한 오브젝트의 타일이 hasUnit이 아니라면           
-            if (Input.GetMouseButtonDown(0) && !hit.collider.GetComponent<Tile>().hasUnits)
+            if (Input.GetMouseButtonDown(0))
             {
-                //Debug.Log("객체 생성");
-                // 객체 생성
-                GameObject unitPoint = Instantiate(currentUnit,
-                    hit.collider.transform.position, Quaternion.identity);
-
-
-                // Hierarchy창 GameManager자식으로 생성된 객체 넣어주기 
-                unitPoint.transform.SetParent(this.transform, false);
-
-                // 충돌된 오브젝트가 있는 자리는 hasUnit = True
-                hit.collider.GetComponent<Tile>().hasUnits = true;
-
-                // 저장해두기
-                SelectUnit(currentUnit, currentUnitSprite);
-
-                Debug.Log("유닛 카운팅");
-                unitCount.Counting();
-
-                // 자리에 배치가 되었다면 메세지 비활성화
-                if (hit.collider.GetComponent<Tile>().hasUnits == true)
+                if (!hit.collider.GetComponent<Tile>().hasUnits)
                 {
-                    SettingText.gameObject.SetActive(false);
+                    //Debug.Log("객체 생성");
+                    // 객체 생성
+                    GameObject unitPoint = Instantiate(currentUnit,
+                        hit.collider.transform.position, Quaternion.identity);
+
+
+                    // Hierarchy창 GameManager자식으로 생성된 객체 넣어주기 
+                    unitPoint.transform.SetParent(this.transform, false);
+
+                    // 충돌된 오브젝트의 Tile 스크립트 가져오기
+                    Tile tile = hit.collider.GetComponent<Tile>();
+
+                    if (tile != null)
+                    {
+                        // 유닛 정보 저장
+                        tile.PlaceUnit(unitPoint, currentUnitSprite);
+                    };
+
+                    Debug.Log("유닛 카운팅");
+                    unitCount.Counting();
+
+                    // 자리에 배치가 되었다면 메세지 비활성화
+                    if (hit.collider.GetComponent<Tile>().hasUnits == true)
+                    {
+                        SettingText.gameObject.SetActive(false);
+                    }
+
+                    currentUnit = null;
+                    currentUnitSprite = null;
+
+                    StartCoroutine(UnitButtonActive());
                 }
-
-                currentUnit = null;
-                currentUnitSprite = null;
-
-                StartCoroutine(UnitButtonActive());
+            
+                // 타일에 유닛이 있을 경우
+                if (hit.collider.GetComponent<Tile>().hasUnits)
+                {
+                    Tile tile = hit.collider.GetComponent<Tile>();
+                    
                 
+                    if (tile.placedUnit != null)
+                    {
+                        // 선택한 유닛 활성화 및 따라다니도록 설정
+                        selectedUnit = tile.GetplacedUnit();
+                        selectedSprite = tile.GetplacedUnitSprite();
+                        tile.PlaceUnit(null,null); // 유닛 정보를 타일에서 제거
+                        //tile.RemoveUnit();
+                    }
+                    // 타일에 유닛이 없고, 이미 선택된 유닛이 있을 경우
+                    else if (tile.placedUnit != null)
+                    {
+                        // 유닛을 새 타일에 배치
+                        //tile.PlaceUnit(selectedUnit, selectedSprite);
+                        
+                        tile.PlaceUnit(selectedUnit,selectedSprite); // 새 타일에 유닛 정보 저장
+                        selectedUnit = null; // 선택 상태 해제
+                    }
+                
+                }
+            
+            
             }
-        }
 
+
+        }
     }
 
 }

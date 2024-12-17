@@ -13,6 +13,12 @@ public class Tile : MonoBehaviour
     static int gridRows = 5; // 세로
     static int gridColumns = 10; // 가로
 
+    // 배치된 유닛 오브젝트를 저장하는 변수
+    public GameObject placedUnit;
+
+    public Sprite PlacedUnitSprite;
+
+
     private void Awake()
     {
          grid = new GameObject[gridRows,gridColumns];
@@ -31,5 +37,43 @@ public class Tile : MonoBehaviour
             }
         }
     }
+
+    // 유닛(이미지, 오브젝트)를 타일에 저장하는 함수
+    public void PlaceUnit(GameObject unit, Sprite UnitSprite)
+    {
+        hasUnits = true;
+        placedUnit = unit;
+        PlacedUnitSprite = UnitSprite;
+    }
+
+    // 유닛 가져오기
+    public GameObject GetplacedUnit()
+    {
+        return placedUnit;
+    }
+
+    public Sprite GetplacedUnitSprite()
+    {
+        return PlacedUnitSprite;
+    }
+
+    public void RemoveUnit()
+    {
+        if (placedUnit != null)
+        {
+            // SetActive가 안되는 거 같음
+            placedUnit.SetActive (false);
+            placedUnit = null;
+            hasUnits = false;
+        }
+    }
+
+    //// 유닛 설정 메서드
+    //public void SetUnit(GameObject unit, Sprite UnitSprite)
+    //{
+    //    hasUnits = (unit != null);
+    //    placedUnit = unit;
+    //    PlacedUnitSprite = UnitSprite;
+    //}
 
 }

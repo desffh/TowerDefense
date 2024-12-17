@@ -405,6 +405,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &50482180
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,6 +631,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &81374632
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,6 +782,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &94000396
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,6 +933,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1001 &94144993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1278,6 +1286,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &158486988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,6 +1437,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &226242382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,6 +1588,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &238038566
 GameObject:
   m_ObjectHideFlags: 0
@@ -1804,6 +1818,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &321263841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1977,7 +1993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42870106512d0a242b7f9a85d90566a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitSprite: {fileID: 21300000, guid: 59a9e6941ca84054290733be01f224dc, type: 3}
+  unitSprite: {fileID: 21300000, guid: 60b5a1084b364564985413c7330b5b1b, type: 3}
   unitObject: {fileID: 6408335882787890806, guid: 71d4aff8ddd793d4c8be93899f9c2950, type: 3}
   icon: {fileID: 1665235569}
   costco: 10
@@ -2210,6 +2226,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &378828448
 GameObject:
   m_ObjectHideFlags: 0
@@ -2359,6 +2377,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &384774809
 GameObject:
   m_ObjectHideFlags: 0
@@ -2508,6 +2528,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &389879217
 GameObject:
   m_ObjectHideFlags: 0
@@ -2811,6 +2833,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &413275314
 GameObject:
   m_ObjectHideFlags: 0
@@ -2960,6 +2984,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &478532502
 GameObject:
   m_ObjectHideFlags: 0
@@ -3243,6 +3269,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &495332021
 GameObject:
   m_ObjectHideFlags: 0
@@ -3526,7 +3554,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 59a9e6941ca84054290733be01f224dc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a77a77d17bd9f274197b9d86c8a5e1ed, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3693,6 +3721,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &575471292
 GameObject:
   m_ObjectHideFlags: 0
@@ -3842,6 +3872,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &591578152
 GameObject:
   m_ObjectHideFlags: 0
@@ -3991,6 +4023,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &592797635
 GameObject:
   m_ObjectHideFlags: 0
@@ -4348,7 +4382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42870106512d0a242b7f9a85d90566a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitSprite: {fileID: 21300000, guid: 59a9e6941ca84054290733be01f224dc, type: 3}
+  unitSprite: {fileID: 21300000, guid: a77a77d17bd9f274197b9d86c8a5e1ed, type: 3}
   unitObject: {fileID: 6408335882787890806, guid: 510cd6d0b99ec034082bd8185b0c89bb, type: 3}
   icon: {fileID: 550958857}
   costco: 5
@@ -4598,6 +4632,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &675638052
 GameObject:
   m_ObjectHideFlags: 0
@@ -4850,7 +4886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42870106512d0a242b7f9a85d90566a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitSprite: {fileID: 21300000, guid: 59a9e6941ca84054290733be01f224dc, type: 3}
+  unitSprite: {fileID: 21300000, guid: 0e0bcdca527a22f4b944ec2779fdded9, type: 3}
   unitObject: {fileID: 6408335882787890806, guid: 2ed5d016469420d40bbb08f390b3b68c, type: 3}
   icon: {fileID: 1463664407}
   costco: 7
@@ -5165,6 +5201,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &790495110
 GameObject:
   m_ObjectHideFlags: 0
@@ -5314,6 +5352,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &843048460
 GameObject:
   m_ObjectHideFlags: 0
@@ -5938,6 +5978,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &942386419
 GameObject:
   m_ObjectHideFlags: 0
@@ -6087,6 +6129,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &945498377
 GameObject:
   m_ObjectHideFlags: 0
@@ -6351,6 +6395,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &977059808
 GameObject:
   m_ObjectHideFlags: 0
@@ -6673,6 +6719,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1006508937
 GameObject:
   m_ObjectHideFlags: 0
@@ -6822,6 +6870,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1041635278
 GameObject:
   m_ObjectHideFlags: 0
@@ -6971,6 +7021,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1075232098
 GameObject:
   m_ObjectHideFlags: 0
@@ -7120,6 +7172,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1095605295
 GameObject:
   m_ObjectHideFlags: 0
@@ -7269,6 +7323,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!224 &1104788912 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5983347131198744244, guid: e74ea705ab9b79c47be1fe4ef58e70c7, type: 3}
@@ -7434,6 +7490,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1153582873
 GameObject:
   m_ObjectHideFlags: 0
@@ -7666,6 +7724,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1249587307
 GameObject:
   m_ObjectHideFlags: 0
@@ -8181,6 +8241,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1301488661
 GameObject:
   m_ObjectHideFlags: 0
@@ -8330,6 +8392,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1350359070
 GameObject:
   m_ObjectHideFlags: 0
@@ -8637,6 +8701,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1457857518
 GameObject:
   m_ObjectHideFlags: 0
@@ -8739,7 +8805,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 59a9e6941ca84054290733be01f224dc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0e0bcdca527a22f4b944ec2779fdded9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9331,6 +9397,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1548041340
 GameObject:
   m_ObjectHideFlags: 0
@@ -9480,6 +9548,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1619342028
 GameObject:
   m_ObjectHideFlags: 0
@@ -9736,6 +9806,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1650972895
 GameObject:
   m_ObjectHideFlags: 0
@@ -9885,6 +9957,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1663698753
 GameObject:
   m_ObjectHideFlags: 0
@@ -9987,7 +10061,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 59a9e6941ca84054290733be01f224dc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 60b5a1084b364564985413c7330b5b1b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10288,6 +10362,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1702742566
 GameObject:
   m_ObjectHideFlags: 0
@@ -10465,7 +10541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42870106512d0a242b7f9a85d90566a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitSprite: {fileID: 21300000, guid: 59a9e6941ca84054290733be01f224dc, type: 3}
+  unitSprite: {fileID: 21300000, guid: d997386eb5f679342ae664d0d098cb31, type: 3}
   unitObject: {fileID: 6408335882787890806, guid: c66049b91421812449968fa2a45d12a7, type: 3}
   icon: {fileID: 2075651770}
   costco: 4
@@ -10631,6 +10707,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1751610616
 GameObject:
   m_ObjectHideFlags: 0
@@ -10780,6 +10858,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1760747031
 GameObject:
   m_ObjectHideFlags: 0
@@ -11008,6 +11088,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1766277821
 GameObject:
   m_ObjectHideFlags: 0
@@ -11157,6 +11239,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1786719298
 GameObject:
   m_ObjectHideFlags: 0
@@ -11306,6 +11390,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1789781629
 GameObject:
   m_ObjectHideFlags: 0
@@ -11455,6 +11541,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1832893501
 GameObject:
   m_ObjectHideFlags: 0
@@ -11642,6 +11730,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1901450334
 GameObject:
   m_ObjectHideFlags: 0
@@ -11791,6 +11881,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1954496619
 GameObject:
   m_ObjectHideFlags: 0
@@ -12019,6 +12111,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &1982086469
 GameObject:
   m_ObjectHideFlags: 0
@@ -12168,6 +12262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &2003661845
 GameObject:
   m_ObjectHideFlags: 0
@@ -12471,6 +12567,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &2039734661
 GameObject:
   m_ObjectHideFlags: 0
@@ -12685,7 +12783,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 59a9e6941ca84054290733be01f224dc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d997386eb5f679342ae664d0d098cb31, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12852,6 +12950,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasUnits: 0
   hasMonsters: 0
+  placedUnit: {fileID: 0}
+  PlacedUnitSprite: {fileID: 0}
 --- !u!1 &2131457665
 GameObject:
   m_ObjectHideFlags: 0
