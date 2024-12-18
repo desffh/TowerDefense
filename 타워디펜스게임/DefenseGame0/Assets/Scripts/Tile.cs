@@ -57,23 +57,21 @@ public class Tile : MonoBehaviour
         return PlacedUnitSprite;
     }
 
-    public void RemoveUnit()
+    // public void RemoveUnit()
+    // {
+    //     if (placedUnit != null)
+    //     {
+    //         
+    //         placedUnit = null;
+    //         hasUnits = false;
+    //     }
+    // }
+
+    public void MoveUnitToHiddenTile(Transform hiddenTile)
     {
         if (placedUnit != null)
         {
-            // SetActive가 안되는 거 같음
-            placedUnit.SetActive (false);
-            placedUnit = null;
-            hasUnits = false;
+            placedUnit.transform.position = hiddenTile.position; // 대기 타일로 이동
         }
     }
-
-    //// 유닛 설정 메서드
-    //public void SetUnit(GameObject unit, Sprite UnitSprite)
-    //{
-    //    hasUnits = (unit != null);
-    //    placedUnit = unit;
-    //    PlacedUnitSprite = UnitSprite;
-    //}
-
 }

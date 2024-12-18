@@ -20,7 +20,7 @@ public class UnitSlot : MonoBehaviour
     public TextMeshProUGUI costText;
 
     // GameManager 스크립트
-    private GameManager gameManager;
+    private TileManager tileManager;
 
     // UnitStat 스크립트
     private UnitStat unitStat;
@@ -29,10 +29,10 @@ public class UnitSlot : MonoBehaviour
 
     private void Start()
     {
-        gameManager =
-            GameObject.Find("GameManager").GetComponent<GameManager>();
+        tileManager =
+            GameObject.Find("TileManager").GetComponent<TileManager>();
         
-        GetComponent<Button>().onClick.AddListener(BuyUnit);
+            GetComponent<Button>().onClick.AddListener(BuyUnit);
 
     }
 
@@ -43,7 +43,7 @@ public class UnitSlot : MonoBehaviour
         if (costco <= Cost.totalCost)
         {
             
-            gameManager.BuyUnit(unitObject, unitSprite);
+            tileManager.BuyUnit(unitObject, unitSprite);
 
             // 전체 cost에서 각각의 유닛 차감
             Cost.totalCost -= costco;
