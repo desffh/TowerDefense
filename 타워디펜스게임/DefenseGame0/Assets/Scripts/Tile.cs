@@ -38,10 +38,18 @@ public class Tile : MonoBehaviour
         }
     }
 
+    // 코루틴 사용해서 hasUnit이 1초뒤에 true가 되게
+    IEnumerator HasUnitActive()
+    {
+        yield return new WaitForSeconds(1.0f);
+
+        hasUnits = true;
+    }
+
     // 유닛(이미지, 오브젝트)를 타일에 저장하는 함수
     public void PlaceUnit(GameObject unit, Sprite UnitSprite)
     {
-        hasUnits = true;
+        StartCoroutine(HasUnitActive());
         placedUnit = unit;
         PlacedUnitSprite = UnitSprite;
     }

@@ -6495,7 +6495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitSprite: {fileID: 21300000, guid: 59a9e6941ca84054290733be01f224dc, type: 3}
-  unitObject: {fileID: 6408335882787890806, guid: ff934c6150e1a4f489810723462f1b02, type: 3}
+  unitObject: {fileID: 6408335882787890806, guid: ebc7e3e9f3f7e024a81617e5a23f2faf, type: 3}
   icon: {fileID: 50482182}
   costco: 3
   costText: {fileID: 1680734728}

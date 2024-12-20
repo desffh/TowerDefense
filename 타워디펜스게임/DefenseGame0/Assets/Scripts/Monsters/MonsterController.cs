@@ -61,6 +61,10 @@ public class MonsterController : MonoBehaviour
                 isStopped = true;
             }
         }
+        else
+        {
+            isStopped = false;
+        }
 
     }
 }

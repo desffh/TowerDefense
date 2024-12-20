@@ -27,6 +27,7 @@ public class UnitCount : MonoBehaviour
         totalCount = 7; // 한계 유닛 카운트
     }
 
+    // 타일에 배치된 오브젝트가 존재하고, 유닛이 배치되있을때 
     public void Counting()
     {
 
