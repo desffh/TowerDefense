@@ -125,6 +125,12 @@ public class TileManager : MonoBehaviour
                 currentUnitSprite = null;
                 currentUnit = null;
 
+                unitCounting.DeleteUnit(currentUnit);
+
+                Destroy(currentUnit);
+
+                
+
                 StartCoroutine(UnitButtonActive());
                 return;
             }
@@ -147,12 +153,14 @@ public class TileManager : MonoBehaviour
                 {
                     Tile tile = hit.collider.GetComponent<Tile>();
 
+                    // 저장된 곳에서 충돌된 타일로 이동
                     currentUnit.transform.position = hit.collider.transform.position; // 타일로 이동
                     tile.PlaceUnit(currentUnit, currentUnitSprite); // 타일에 유닛 저장
-
+                    
                     unitCount.Counting(); // 유닛 카운트 증가
-
-                    if (tile.hasUnits == true)
+                    
+                    // 타일에 유닛이 있으면 메세지 비활성화
+                    if (tile != null)
                     {
                         SettingText.gameObject.SetActive(false); // 메시지 비활성화
                     }
@@ -178,7 +186,7 @@ public class TileManager : MonoBehaviour
                     currentUnit = tile.GetplacedUnit(); // 타일에서 유닛 가져오기
                     currentUnitSprite = tile.GetplacedUnitSprite();
 
-                    tile.PlaceUnit(null, null); // 타일에서 유닛 제거
+                    tile.MoveTileUnit(null, null); // 타일에서 유닛 제거 & 타일 hasUnit false
                     currentUnit.transform.position = saveTile.position; // 세이브존으로 이동
                 }
             }

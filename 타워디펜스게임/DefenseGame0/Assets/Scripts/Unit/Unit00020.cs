@@ -13,4 +13,6 @@ public class Unit00020 : UnitStat
     {
         Debug.Log("00020 Attack");
     }
+
+    
 }

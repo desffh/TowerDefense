@@ -11,7 +11,7 @@ public class UnitCount : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI totalUnit;
 
-    static public int unitCount;
+    static public int unitCount; // 현재 유닛 카운트
 
     public int totalCount;
 
@@ -30,13 +30,13 @@ public class UnitCount : MonoBehaviour
     // 타일에 배치된 오브젝트가 존재하고, 유닛이 배치되있을때 
     public void Counting()
     {
-
+    
         if (Tile.grid == null)
         {
             Debug.LogError("Tile이 초기화되지 않았습니다.");
             return;
         }
-
+    
         for (int row = 0; row < Tile.grid.GetLength(0); row++)
         {
             for (int col = 0; col < Tile.grid.GetLength(1); col++)
@@ -54,9 +54,29 @@ public class UnitCount : MonoBehaviour
             }
         }
         Debug.Log($"유닛 카운트: {unitCount}");
-
-
+    
+    
         // UI 업데이트
+        UpdateUI();
+    }
+
+
+
+
+    public void DeleteUnit(GameObject unit)
+    {
+        if (unit != null)
+        {
+            return;
+        }
+
+
+        if(unit == null)
+        {
+            // 0이하로 내려가지 않게 함
+            unitCount = Mathf.Max(0, unitCount-1);
+        }
+
         UpdateUI();
     }
 

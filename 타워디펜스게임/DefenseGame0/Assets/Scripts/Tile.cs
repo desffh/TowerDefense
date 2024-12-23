@@ -41,7 +41,7 @@ public class Tile : MonoBehaviour
     // 코루틴 사용해서 hasUnit이 1초뒤에 true가 되게
     IEnumerator HasUnitActive()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
 
         hasUnits = true;
     }
@@ -52,8 +52,23 @@ public class Tile : MonoBehaviour
         StartCoroutine(HasUnitActive());
         placedUnit = unit;
         PlacedUnitSprite = UnitSprite;
+
+        if (unit == null && UnitSprite == null)
+        {
+            hasUnits = false;
+        }
     }
 
+    public void MoveTileUnit(GameObject unit,Sprite UnitSprite)
+    {
+        placedUnit = unit;
+        PlacedUnitSprite = UnitSprite;
+
+        if (unit == null && UnitSprite == null)
+        {
+            hasUnits = false;
+        }
+    }
     // 유닛 가져오기
     public GameObject GetplacedUnit()
     {
@@ -65,15 +80,6 @@ public class Tile : MonoBehaviour
         return PlacedUnitSprite;
     }
 
-    // public void RemoveUnit()
-    // {
-    //     if (placedUnit != null)
-    //     {
-    //         
-    //         placedUnit = null;
-    //         hasUnits = false;
-    //     }
-    // }
 
     public void MoveUnitToHiddenTile(Transform hiddenTile)
     {

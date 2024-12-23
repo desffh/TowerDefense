@@ -15,6 +15,7 @@ public class MonsterController : MonoBehaviour
     private bool isStopped;
     private bool isApproachingTarget = false; // 유닛 위치로 이동 중인지 확인
     private Vector3 targetPosition; // 목표 위치(유닛 위치)
+    private Collider2D collidedUnit; // 충돌한 유닛을 추적
 
 
     private void FixedUpdate()
@@ -37,14 +38,19 @@ public class MonsterController : MonoBehaviour
             // 기본 왼쪽으로 이동
             transform.Translate(new Vector3(moveSpeed * -1, 0, 0));
         }
-
+        
     }
 
 
+    // OnTriggerEnter2D -> 오브젝트간 충돌이 일어날때 처음 한번 호출
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 10) // 유닛 레이어
         {
+            
+            collidedUnit = collision; // 충돌한 유닛 저장
+
+
             // 유닛과 몬스터의 좌표를 가져옴
             Vector3 unitPosition = collision.transform.position;
             Vector3 monsterPosition = transform.position;
@@ -61,10 +67,16 @@ public class MonsterController : MonoBehaviour
                 isStopped = true;
             }
         }
-        else
-        {
-            isStopped = false;
-        }
-
     }
+
+    // OnTriggerExit2D -> 오브젝트간 충돌에서 벗어날때
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision == collidedUnit)
+        {
+            collidedUnit = null;
+            isStopped = false; // 다시 이동
+        }
+    }
+
 }

@@ -20,7 +20,7 @@ public class Cost : MonoBehaviour
     {
         while (totalCost < 50)
         {
-            yield return new WaitForSeconds(3.0f);
+            yield return new WaitForSeconds(2.0f);
 
             totalCost += 5;
             UpdateUI();
