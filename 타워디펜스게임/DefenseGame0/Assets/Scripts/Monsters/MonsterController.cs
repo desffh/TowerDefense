@@ -12,11 +12,16 @@ public class MonsterController : MonoBehaviour
     public float approachSpeed = 0.2f; // 유닛 위치로 이동하는 속도
 
 
-    private bool isStopped;
+    public bool isStopped;
     private bool isApproachingTarget = false; // 유닛 위치로 이동 중인지 확인
     private Vector3 targetPosition; // 목표 위치(유닛 위치)
     private Collider2D collidedUnit; // 충돌한 유닛을 추적
 
+
+    private void Awake()
+    {
+        FinalDestination = new Vector3(-19, 0, 0);    
+    }
 
     private void FixedUpdate()
     {
@@ -37,8 +42,13 @@ public class MonsterController : MonoBehaviour
         {
             // 기본 왼쪽으로 이동
             transform.Translate(new Vector3(moveSpeed * -1, 0, 0));
+
+            if (Mathf.Abs(transform.position.x - FinalDestination.x) < 0.01f)
+            {
+                isStopped = true;
+            }
         }
-        
+
     }
 
 

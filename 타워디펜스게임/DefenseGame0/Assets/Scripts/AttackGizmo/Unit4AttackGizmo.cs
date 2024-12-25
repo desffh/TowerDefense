@@ -35,7 +35,7 @@ public class Unit4AttackGizmo : MonoBehaviour
         }
         else
         {
-            Debug.Log("충돌 범위가 카메라 화면 밖입니다.");
+           // Debug.Log("충돌 범위가 카메라 화면 밖입니다.");
         }
     }
 

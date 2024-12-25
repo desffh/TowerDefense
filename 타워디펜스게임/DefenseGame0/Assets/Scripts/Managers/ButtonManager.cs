@@ -2,6 +2,7 @@ using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -27,4 +28,8 @@ public class ButtonManager : MonoBehaviour
         exitMenu.SetActive(false);
     }
 
+    public void ExitButtonClick()
+    {
+        SceneManager.LoadScene("LobbyScene");
+    }
 }

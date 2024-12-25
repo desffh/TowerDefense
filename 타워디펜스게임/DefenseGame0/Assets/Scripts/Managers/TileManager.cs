@@ -49,6 +49,8 @@ public class TileManager : MonoBehaviour
     private void Start()
     {
         unitCounting = gameObject.AddComponent<UnitCount>();
+
+        UnitOver();
     }
 
     public void BuyUnit(GameObject unitPrefab, Sprite sprite)
@@ -64,16 +66,19 @@ public class TileManager : MonoBehaviour
         currentUnit.SetActive(true); // 유닛 활성화
     }
 
-    public bool UnitOver()
+    private void UnitOver()
     {
         // 유닛의 갯수가 한계 갯수와 같아지면 더이상 생성불가
         if (unitCount.GetUnitTotalCount() == unitCount.GetUnitCount())
         {
-            return true;
+            foreach (Button button in unitButtons)
+            {
+                button.interactable = false;
+            }
         }
         else
         {
-            return false;
+            return;
         }
     }
 
@@ -103,18 +108,18 @@ public class TileManager : MonoBehaviour
             tile.GetComponent<SpriteRenderer>().enabled = false;
         }
 
+       
+
         // 마우스 콜라이더와 (유닛목록에서 구매한) 유닛이 충돌한다면
         if (hit.collider && currentUnit)
         {
-            // 유닛이 꽉 차면 버튼 비활성화
-            if (UnitOver() == true)
+            foreach (Button button in unitButtons)
             {
-                foreach (Button button in unitButtons)
-                {
-                    button.interactable = false;
-                }
-                return;
+                button.interactable = false;
             }
+            
+
+          
 
             // 삭제존 클릭 시
             if (Input.GetMouseButtonDown(0) && hit.collider.gameObject.layer == LayerMask.NameToLayer("DeleteZone"))
@@ -125,7 +130,7 @@ public class TileManager : MonoBehaviour
                 currentUnitSprite = null;
                 currentUnit = null;
 
-                unitCounting.DeleteUnit(currentUnit);
+                SettingText.gameObject.SetActive(false); // 메시지 비활성화
 
                 Destroy(currentUnit);
 
@@ -183,11 +188,13 @@ public class TileManager : MonoBehaviour
 
                 if (tile.placedUnit != null)
                 {
+                    unitCounting.DelCounting();
                     currentUnit = tile.GetplacedUnit(); // 타일에서 유닛 가져오기
                     currentUnitSprite = tile.GetplacedUnitSprite();
 
                     tile.MoveTileUnit(null, null); // 타일에서 유닛 제거 & 타일 hasUnit false
                     currentUnit.transform.position = saveTile.position; // 세이브존으로 이동
+
                 }
             }
         }

@@ -6,8 +6,6 @@ public class Tile : MonoBehaviour
 {
     public bool hasUnits;
 
-    public bool hasMonsters;
-
     public static GameObject[,] grid;
 
     static int gridRows = 5; // ¼¼·Î

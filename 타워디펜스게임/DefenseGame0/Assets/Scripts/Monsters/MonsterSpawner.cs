@@ -44,24 +44,27 @@ public class MonsterSpawner : MonoBehaviour
     {
         int ran = Random.Range(0, spawnPoints.Length);
 
-        // 큐에서 하나씩 빼기
-        GameObject monsterSpawn = monsterQueue.Dequeue();
-
-        GameObject myMonster =
-            Instantiate(monsterSpawn, spawnPoints[ran].position, Quaternion.identity);
-
-        myMonster.transform.SetParent(spawnPoints[ran]);
-
-        // 목적지 설정
-        var spawnPointComponent = spawnPoints[ran].GetComponent<SpawnPoint>();
-
-        if (spawnPointComponent != null)
+        if(monsterQueue.Count != 0)
         {
-            myMonster.GetComponent<MonsterController>().FinalDestination = spawnPointComponent.Destination;
-        }
-        else
-        {
-            Debug.LogError("SpawnPoint 컴포넌트를 찾을 수 없습니다.");
+            // 큐에서 하나씩 빼기
+            GameObject monsterSpawn = monsterQueue.Dequeue();
+            
+            GameObject myMonster =
+                Instantiate(monsterSpawn, spawnPoints[ran].position, Quaternion.identity);
+            
+            myMonster.transform.SetParent(spawnPoints[ran]);
+
+            // 목적지 설정
+            var spawnPointComponent = spawnPoints[ran].GetComponent<SpawnPoint>();
+
+            if (spawnPointComponent != null)
+            {
+                myMonster.GetComponent<MonsterController>().FinalDestination = spawnPointComponent.Destination;
+            }
+            else
+            {
+                Debug.LogError("SpawnPoint 컴포넌트를 찾을 수 없습니다.");
+            }
         }
     }
 }

@@ -11,47 +11,29 @@ public class UnitCount : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI totalUnit;
 
-    static public int unitCount; // 현재 유닛 카운트
+    static public int unitCount; // 현재 유닛 카운트 static
 
     public int totalCount;
 
     private Tile tile;
 
 
-    private void Start()
+    private void Awake()
     {
         totalUnitText = GetComponent<TextMeshProUGUI>();
 
-        unitCount = 0; // 현재 유닛 카운트
+        unitCount = 0; // 현재 유닛 카운트 (시작 시 0)
 
         totalCount = 7; // 한계 유닛 카운트
     }
 
-    // 타일에 배치된 오브젝트가 존재하고, 유닛이 배치되있을때 
+    // 유닛이 배치될때
     public void Counting()
     {
-    
-        if (Tile.grid == null)
+
+        if (unitCount < totalCount)
         {
-            Debug.LogError("Tile이 초기화되지 않았습니다.");
-            return;
-        }
-    
-        for (int row = 0; row < Tile.grid.GetLength(0); row++)
-        {
-            for (int col = 0; col < Tile.grid.GetLength(1); col++)
-            {
-                GameObject tileObject = Tile.grid[row, col];
-                
-                if (tileObject != null && tileObject.GetComponent<Tile>().hasUnits)
-                {
-                    if(unitCount < totalCount)
-                    {
-                        unitCount += 1;
-                        break;
-                    }
-                }
-            }
+            unitCount += 1;
         }
         Debug.Log($"유닛 카운트: {unitCount}");
     
@@ -60,25 +42,21 @@ public class UnitCount : MonoBehaviour
         UpdateUI();
     }
 
-
-
-
-    public void DeleteUnit(GameObject unit)
+    // 유닛이 배치되지않을때
+    public void DelCounting()
     {
-        if (unit != null)
+
+        if (unitCount <= totalCount)
         {
-            return;
+            unitCount -= 1;
         }
+        Debug.Log($"유닛 카운트: {unitCount}");
 
 
-        if(unit == null)
-        {
-            // 0이하로 내려가지 않게 함
-            unitCount = Mathf.Max(0, unitCount-1);
-        }
-
+        // UI 업데이트
         UpdateUI();
     }
+
 
     
 
