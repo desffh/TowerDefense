@@ -9,6 +9,14 @@ public class Unit1AttackGizmo : MonoBehaviour
     private Vector2 BoxSize = new Vector2(13.2f, 1.3f);
     private Vector2 Offset = new Vector2(7.4f, 0f);
 
+    [SerializeField] private Unit1Arrow unit1Arrow;
+
+    private bool hasArrow = false;
+
+    private void Start()
+    {
+       
+    }
 
     void Update()
     {
@@ -26,17 +34,32 @@ public class Unit1AttackGizmo : MonoBehaviour
 
             foreach (Collider2D collider in collider2Ds)
             {
-                if (collider.CompareTag("Monster"))
+                if (collider.CompareTag("Monster") && !hasArrow)
                 {
                     Debug.Log("몬스터와 충돌");
+
+
+                    // UnitArrow 생성
+
+                    unit1Arrow.SpawnArrow();
+                    unit1Arrow.bowObj.transform.SetParent(transform);
+                    hasArrow = true;
                 }
             }
         }
         else
         {
-            //Debug.Log("충돌 범위가 카메라 화면 밖입니다.");
+            Debug.Log("충돌 범위가 카메라 화면 밖입니다.");
         }
     }
+
+
+    IEnumerator ResetArrowFlag()
+    {
+        yield return new WaitForSeconds(1f);  // Reset flag after 1 second
+        hasArrow = false;
+    }
+
 
     void OnDrawGizmos()
     {

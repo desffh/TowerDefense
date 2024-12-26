@@ -25,7 +25,7 @@ public class Unit00010 : UnitStat
         set { cost = value; }
     }
 
-    protected override int Health
+    public override int Health
     {
         get { return health; }
         set { health = value; }

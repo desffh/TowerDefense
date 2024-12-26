@@ -11,7 +11,7 @@ public abstract class UnitStat : MonoBehaviour
     protected abstract int Cost
     { get; set; }
 
-    protected abstract int Health
+    public abstract int Health
     { get; set; }
 
     protected abstract int Defense
