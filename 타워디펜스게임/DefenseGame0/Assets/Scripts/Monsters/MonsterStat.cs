@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class MonsterStat : MonoBehaviour
 {
-    protected abstract int Health
+    public abstract int Health
     { get; set; }
 
     protected abstract int Defense 

@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: -4782535727596745006}
   - component: {fileID: 224601072680156930}
   - component: {fileID: -4707460582207260229}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Monster3
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,6 +117,7 @@ MonoBehaviour:
   FinalDestination: {x: -6, y: 0, z: 0}
   moveSpeed: 0.01
   approachSpeed: 0.2
+  isStopped: 0
 --- !u!61 &-4782535727596745006
 BoxCollider2D:
   m_ObjectHideFlags: 0

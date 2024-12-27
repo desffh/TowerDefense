@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3563632554187085091}
   - component: {fileID: 2878503814031034855}
   - component: {fileID: -4342955519258480565}
-  - component: {fileID: 5818422349560736721}
-  m_Layer: 10
+  - component: {fileID: 6108626721270997937}
+  m_Layer: 12
   m_Name: Unit1Arrow
-  m_TagString: Unit
+  m_TagString: UnitWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e0458988d0f1242bfa30ac46870c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5818422349560736721
+--- !u!114 &6108626721270997937
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,9 +153,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6408335882787890806}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1310614210fcd444eba6ab596f2b489c, type: 3}
+  m_Script: {fileID: 11500000, guid: c915456e52d563140ba933c24fe8f234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unit1arrow: {fileID: 6408335882787890806}
-  bowObj: {fileID: 6408335882787890806}
-  Unit1Obj: {fileID: 6408335882787890806, guid: ebc7e3e9f3f7e024a81617e5a23f2faf, type: 3}

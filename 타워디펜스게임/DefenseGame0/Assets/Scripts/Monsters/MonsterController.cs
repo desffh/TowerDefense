@@ -13,6 +13,7 @@ public class MonsterController : MonoBehaviour
 
 
     public bool isStopped;
+
     private bool isApproachingTarget = false; // 유닛 위치로 이동 중인지 확인
     private Vector3 targetPosition; // 목표 위치(유닛 위치)
     private Collider2D collidedUnit; // 충돌한 유닛을 추적

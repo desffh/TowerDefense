@@ -17,7 +17,7 @@ public class Monster3Stat : MonsterStat
 
     // get : 데이터를 반환해서 보여줌
     // set : 값을 설정하는 역할
-    protected override int Health
+    public override int Health
     {
         get { return health; }
         set { health = value; }

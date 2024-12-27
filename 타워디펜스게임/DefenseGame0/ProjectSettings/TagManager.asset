@@ -8,6 +8,7 @@ TagManager:
   - DestroyZone
   - Unit
   - NotMonsterTile
+  - UnitWeapon
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - 
   - Object
   - Monster
-  - 
+  - UnitWeapon
   - 
   - 
   - 
