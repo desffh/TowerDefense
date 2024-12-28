@@ -46,9 +46,13 @@ public class TileManager : MonoBehaviour
     // ¼û°ÜµÐ ÀúÀå Å¸ÀÏ À§Ä¡
     [SerializeField] Transform saveTile;
 
+    Unit1Arrow Unit1Arrow;
+
     private void Start()
     {
         unitCounting = gameObject.AddComponent<UnitCount>();
+
+        Unit1Arrow = GetComponent<Unit1Arrow>();
 
         UnitOver();
     }
@@ -135,6 +139,7 @@ public class TileManager : MonoBehaviour
                 Destroy(currentUnit);
 
                 
+
 
                 StartCoroutine(UnitButtonActive());
                 return;

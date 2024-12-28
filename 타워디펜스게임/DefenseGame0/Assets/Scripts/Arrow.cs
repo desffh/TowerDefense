@@ -12,7 +12,7 @@ public class Arrow : MonoBehaviour
 
     private float speed = 3;
 
-    public int damage = 5;
+    public int damage = 20;
 
     // 충돌 확인 
     private void OnTriggerEnter2D(Collider2D other)
@@ -28,19 +28,19 @@ public class Arrow : MonoBehaviour
                 if (monsterStat is Monster1Stat)
                 {
                     Monster1Stat monster1Stat = (Monster1Stat)monsterStat;
-                    monster1Stat.Health -= damage;
+                    monster1Stat.TakeDamage(damage);
                 }
 
                 else if (monsterStat is Monster2Stat)
                 {
                     Monster2Stat monster2Stat = (Monster2Stat)monsterStat;
-                    monster2Stat.Health -= damage;
+                    monster2Stat.TakeDamage(damage);
                 }
 
                 else if (monsterStat is Monster3Stat)
                 {
                     Monster3Stat monster3Stat = (Monster3Stat)monsterStat;
-                    monster3Stat.Health -= damage;
+                    monster3Stat.TakeDamage(damage);
                 }
             }
             gameObject.SetActive(false);

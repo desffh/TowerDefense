@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 
 // 프로즌 스티퍼 (일반형)
 public class Monster2Stat : MonsterStat
 {
+
+
+
     private int health;
 
     private int defense;
@@ -16,12 +21,22 @@ public class Monster2Stat : MonsterStat
 
     private float movespeed;
 
+    protected override void Start()
+    {
+        maxHealth = 150;
+        base.Start(); // 부모 클래스의 Start 호출
+
+    }
+
+
+
+
     // get : 데이터를 반환해서 보여줌
     // set : 값을 설정하는 역할
     public override int Health
     {
         get { return health; }
-        set { health = value; }
+
     }
 
     protected override int Defense
@@ -54,7 +69,7 @@ public class Monster2Stat : MonsterStat
 
     public Monster2Stat()
     {
-        health = 150;
+        //health = 150;
         defense = 0;
         damage = 2;
         attackspeed = 5.0f;

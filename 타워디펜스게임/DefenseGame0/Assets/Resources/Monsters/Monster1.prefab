@@ -230,3 +230,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  currenthealth: 0
+  HPslider: {fileID: 2740595235420941855, guid: b4f74da1ddd924b43bd363d1616367b3, type: 3}

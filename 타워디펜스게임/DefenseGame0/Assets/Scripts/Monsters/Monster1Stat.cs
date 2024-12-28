@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 // 쿠션더미(일반형)
 public class Monster1Stat : MonsterStat
 {
-    [SerializeField] int health;
+    
+
+    private int health;
 
     private int defense;
 
@@ -16,12 +19,19 @@ public class Monster1Stat : MonsterStat
 
     private float movespeed;
 
+    protected override void Start()
+    {
+        maxHealth = 50;
+        base.Start(); // 부모 클래스의 Start 호출
+
+    }
+
     // get : 데이터를 반환해서 보여줌
     // set : 값을 설정하는 역할
     public override int Health
     {
         get { return health; }
-        set { health = value; }    
+   
     }
 
     protected override int Defense
@@ -54,7 +64,7 @@ public class Monster1Stat : MonsterStat
 
     public Monster1Stat()
     {
-        health = 50;
+        //maxhealth = 50;
         defense = 0;
         damage = 1;
         attackspeed = 3.0f;

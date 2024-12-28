@@ -13,6 +13,10 @@ public class Unit1Arrow : MonoBehaviour
 
     public bool hasArrow = false;
 
+    public void ActiveFalse()
+    {
+        hasArrow = false;
+    }
 
 
     public void StartArrowCreation()
@@ -39,12 +43,18 @@ public class Unit1Arrow : MonoBehaviour
 
             GameObject newArrow = Instantiate(arrow, pos.position, transform.rotation);
 
+            // 생성된 화살을 유닛의 자식으로 설정
+            newArrow.transform.parent = this.transform;
+
             hasArrow = true;
 
             // 생성된 화살에 Destroy 이벤트 연결
             Arrow unit1Arrow = newArrow.GetComponent<Arrow>();
 
-            unit1Arrow.onDestroyed += ArrowDestroyed;
+            if (unit1Arrow != null)
+            {
+                unit1Arrow.onDestroyed += ArrowDestroyed;
+            }
 
         }
     }
