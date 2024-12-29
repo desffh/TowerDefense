@@ -62,6 +62,7 @@ public abstract class MonsterStat : MonoBehaviour
 
     protected virtual void Die()
     {
+        MonsterCount.Instance.DecreaseCount(); // 몬스터 카운트 감소
         Debug.Log($"{gameObject.name} 사망!");
         Destroy(gameObject);
         HPslider.gameObject.SetActive( false );

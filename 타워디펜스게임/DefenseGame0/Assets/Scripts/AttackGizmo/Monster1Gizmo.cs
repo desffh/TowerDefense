@@ -10,7 +10,12 @@ public class Monster1Gizmo : MonoBehaviour
     private Vector2 BoxSize = new Vector2(2.8f, 1.3f);
     private Vector2 Offset = new Vector2(-0.8f, 0f);
 
+    Monster1Anime Monster1Anime;
 
+    private void Start()
+    {
+        Monster1Anime = GetComponent<Monster1Anime>();
+    }
     void Update()
     {
         Vector2 boxCenter = (Vector2)Pos.position + Offset;

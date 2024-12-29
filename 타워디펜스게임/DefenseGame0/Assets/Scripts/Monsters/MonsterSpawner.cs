@@ -65,6 +65,7 @@ public class MonsterSpawner : MonoBehaviour
             {
                 Debug.LogError("SpawnPoint 컴포넌트를 찾을 수 없습니다.");
             }
+            MonsterCount.Instance.IncreaseCount(); // 몬스터 카운트 증가
         }
     }
 }
