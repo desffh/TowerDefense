@@ -10,12 +10,16 @@ public class Unit2AttackGizmo : MonoBehaviour
 
     public Unit2Snow unit2Snow;
 
+    Unit2Anime Unit2Anime;
+
     private bool hasSnow = false;
 
     private void Start()
     {
         // 스크립트 가져오기
         unit2Snow = GetComponent<Unit2Snow>();
+
+        Unit2Anime = GetComponent<Unit2Anime>();
     }
 
 
@@ -55,11 +59,13 @@ public class Unit2AttackGizmo : MonoBehaviour
             {
                 //Debug.Log("몬스터 감지: 눈 생성 시작");
                 unit2Snow.StartSnowCreation(); // 눈 생성 반복 시작
+                Unit2Anime.StartAttack();
             }
             else if (!monsterDetected)
             {
                 //Debug.Log("몬스터 없음: 눈 생성 중단");
                 unit2Snow.StopSnowCreation(); // 반복 중단
+                Unit2Anime.EndAttack();
             }
         }
         else

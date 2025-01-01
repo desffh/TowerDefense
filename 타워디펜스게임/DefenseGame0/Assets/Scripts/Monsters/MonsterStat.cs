@@ -13,9 +13,13 @@ public abstract class MonsterStat : MonoBehaviour
 
     protected Slider HPslider;                      // 체력 슬라이더
 
+    protected Animator animator;                   // 애니메이터 추가
+    private bool isDying = false;                  // 죽음 상태 플래그
+
     protected virtual void Start()
     {
         currentHealth = maxHealth;
+        animator = GetComponent<Animator>();       // Animator 컴포넌트 가져오기
 
         if (HPslider != null)
         {
@@ -46,6 +50,8 @@ public abstract class MonsterStat : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (isDying) return; // 죽음 중일 때 추가 데미지 방지
+
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
@@ -56,7 +62,22 @@ public abstract class MonsterStat : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Die();
+            PlayDeathAnimation();
+        }
+    }
+
+    // 죽음 애니메이션 실행
+    protected virtual void PlayDeathAnimation()
+    {
+        if (animator != null)
+        {
+            isDying = true;
+            animator.SetTrigger("Die"); // Die 트리거 설정
+            StartCoroutine(WaitForDeathAnimation());
+        }
+        else
+        {
+            Die(); // 애니메이터가 없으면 바로 Die 호출
         }
     }
 
@@ -67,8 +88,13 @@ public abstract class MonsterStat : MonoBehaviour
         Destroy(gameObject);
         HPslider.gameObject.SetActive( false );
     }
-    public abstract int Health
-    { get;}
+
+    private IEnumerator WaitForDeathAnimation()
+    {
+        yield return new WaitForSeconds(1.5f); // 애니메이션 지속 시간
+        Die();
+    }
+
 
     protected abstract int Defense 
     { get; set; }

@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: -7319630482987235316}
   - component: {fileID: 4035395357792428112}
   - component: {fileID: 755904413170698295}
+  - component: {fileID: 6926946300009715197}
   m_Layer: 10
   m_Name: Unit00010
   m_TagString: Unit
@@ -241,3 +242,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrow: {fileID: 6408335882787890806, guid: 6d6a4ae006831b34d94eb590e77193a2, type: 3}
   pos: {fileID: 5065657737486695224}
+  hasArrow: 0
+--- !u!114 &6926946300009715197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6408335882787890806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fd5ad1f84661d64eace5898a9373ede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4035395357792428112}

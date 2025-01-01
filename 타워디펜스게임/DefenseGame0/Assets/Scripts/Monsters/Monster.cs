@@ -38,7 +38,7 @@ public class Monster : MonoBehaviour
             }
             else
             {
-                Debug.LogError("MonsterStat 또는 Slider가 null입니다!");
+                Debug.LogError("MonsterStat 또는 Slider가 null입니다!"); 
             }
             // HP 바를 몬스터 위에 배치
             hpBarInstance.GetComponent<HPBar>().SetTarget(this.transform);

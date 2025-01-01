@@ -8,9 +8,6 @@ using UnityEngine.UI;
 public class Monster1Stat : MonsterStat
 {
     
-
-    private int health;
-
     private int defense;
 
     private int damage;
@@ -25,14 +22,14 @@ public class Monster1Stat : MonsterStat
         base.Start(); // 부모 클래스의 Start 호출
 
     }
+    // 애니메이션 이벤트에서 호출
+    protected override void Die()
+    {
+        base.Die(); // 기본 Die 동작 실행
+    }
 
     // get : 데이터를 반환해서 보여줌
-    // set : 값을 설정하는 역할
-    public override int Health
-    {
-        get { return health; }
-   
-    }
+
 
     protected override int Defense
     {

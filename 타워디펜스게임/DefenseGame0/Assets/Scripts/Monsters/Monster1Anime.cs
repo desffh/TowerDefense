@@ -15,12 +15,26 @@ public class Monster1Anime : MonoBehaviour
 
     public void StartAttack()
     {
-        animator.SetBool("Attack", true);
+        if (animator != null)
+        {
+            animator.SetBool("Attack", true); // Attack 애니메이션으로 전환
+        }
+        else
+        {
+            Debug.LogError("Animator가 존재하지 않습니다!");
+        }
     }
 
     public void EndAttack()
     {
-        animator.SetBool("Attack", false);
+        if (animator != null)
+        {
+            animator.SetBool("Attack", false); // Idle 애니메이션으로 전환
+        }
+        else
+        {
+            Debug.LogError("Animator가 존재하지 않습니다!");
+        }
     }
 
 }

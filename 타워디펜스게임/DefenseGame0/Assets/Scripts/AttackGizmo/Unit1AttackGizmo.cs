@@ -11,12 +11,17 @@ public class Unit1AttackGizmo : MonoBehaviour
 
     public Unit1Arrow unit1Arrow;
 
+    Unit1Anime Unit1Anime;
+
+
     private bool hasArrow = false;
 
     private void Start()
     {
         // 스크립트 가져오기
         unit1Arrow = GetComponent<Unit1Arrow>();
+
+        Unit1Anime = GetComponent<Unit1Anime>();
     }
 
     void Update()
@@ -53,11 +58,13 @@ public class Unit1AttackGizmo : MonoBehaviour
             {
                 //Debug.Log("몬스터 감지: 화살 생성 시작");
                 unit1Arrow.StartArrowCreation(); // 화살 생성 반복 시작
+                Unit1Anime.StartAttack();
             }
             else if (!monsterDetected)
             {
                 //Debug.Log("몬스터 없음: 화살 생성 중단");
                 unit1Arrow.StopArrowCreation(); // 반복 중단
+                Unit1Anime.EndAttack();
             }
         }
         else

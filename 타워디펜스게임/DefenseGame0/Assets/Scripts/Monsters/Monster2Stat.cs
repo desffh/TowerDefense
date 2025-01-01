@@ -9,10 +9,6 @@ using UnityEngine.UI;
 public class Monster2Stat : MonsterStat
 {
 
-
-
-    private int health;
-
     private int defense;
 
     private int damage;
@@ -28,16 +24,15 @@ public class Monster2Stat : MonsterStat
 
     }
 
+    protected override void Die()
+    {
+        base.Die(); // 기본 Die 동작 실행
+    }
 
 
 
     // get : 데이터를 반환해서 보여줌
     // set : 값을 설정하는 역할
-    public override int Health
-    {
-        get { return health; }
-
-    }
 
     protected override int Defense
     {

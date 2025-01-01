@@ -46,6 +46,8 @@ GameObject:
   - component: {fileID: 5971364698008038075}
   - component: {fileID: -1696366447147959749}
   - component: {fileID: -3245569201654242033}
+  - component: {fileID: -1649618265662939139}
+  - component: {fileID: -2155863911679177976}
   m_Layer: 10
   m_Name: Unit00020
   m_TagString: Unit
@@ -229,3 +231,30 @@ MonoBehaviour:
   snow: {fileID: 6408335882787890806, guid: ff92d73e6bd5ef24e9107348dd480d5f, type: 3}
   pos: {fileID: 4440723324067527291}
   hasSnow: 0
+--- !u!114 &-1649618265662939139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6408335882787890806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 212e054b61207ba4b933b472ded4cc5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: -1696366447147959749}
+--- !u!114 &-2155863911679177976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6408335882787890806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09efee573e981aa4fa90b3a0c5e44989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  currentHealth: 0
